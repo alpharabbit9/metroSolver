@@ -22,7 +22,7 @@ const Navbar = () => {
     const cartTotal = 999;
 
     return (
-        <nav className="bg-gradient-to-br from-[#0a0515] via-[#130a24] to-[#1a0f2e]">
+        <nav className="">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8  inset-0 bg-gradient-to-r from-[#0a0515]/80 via-transparent to-transparent ">
                 <div className="flex items-center justify-between h-20">
                     {/* Logo */}
