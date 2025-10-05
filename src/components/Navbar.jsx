@@ -3,6 +3,8 @@ import { ShoppingCart, Menu, X, ChevronDown, User, Settings, LogOut } from 'luci
 import { motion, AnimatePresence } from 'framer-motion';
 import Lottie from 'lottie-react';
 import logo from '../../public/Lottie Files/Logo.json'
+import { NavLink } from 'react-router-dom';
+import { label } from 'framer-motion/client';
 
 const Navbar = () => {
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -11,11 +13,11 @@ const Navbar = () => {
     const [activeLink, setActiveLink] = useState('Home');
 
     const navLinks = [
-        { id: 'home', label: 'Home' },
-        { id: 'about', label: 'About us' },
-        { id: 'services', label: 'Services', hasDropdown: true },
-        { id: 'white-label', label: 'White label' },
-        { id: 'contact', label: 'Contact us' },
+        { id: '/', label: 'Home' },
+        { id: '/about', label: 'About us' },
+        { id: '/services', label: 'Services', hasDropdown: true },
+        { id: '/white-label', label: 'White label' },
+        { id: '/contact', label: 'Contact us' },
     ];
 
     const cartItemCount = 8;
@@ -37,20 +39,20 @@ const Navbar = () => {
                     {/* Desktop Navigation */}
                     <div className="hidden lg:flex items-center space-x-2  px-4 py-1 rounded-3xl bg-[#150D1C]">
                         {navLinks.map((link) => (
-                            <button
-                                key={link.id}
-                                onClick={() => setActiveLink(link.label)}
-                                className={`px-6 py-2.5 rounded-full text-sm font-medium transition-all duration-300 ${activeLink === link.label
-                                    ? 'bg-white/10 text-white border border-white/20'
-                                    : 'text-gray-300 hover:text-white hover:bg-white/5'
-                                    } ${link.hasDropdown ? 'flex items-center gap-1' : ''}`}
-                            >
-                                {link.label}
-                                {link.hasDropdown && (
-                                    <ChevronDown className="w-4 h-4" />
-                                )}
-                            </button>
+                            <NavLink key={link.id} to={link.id}>
+                                <button
+                                    onClick={() => setActiveLink(link.label)}
+                                    className={`px-6 py-2.5 rounded-full text-sm font-medium transition-all duration-300 ${activeLink === link.label
+                                        ? 'bg-white/10 text-white border border-white/20'
+                                        : 'text-gray-300 hover:text-white hover:bg-white/5'
+                                        } ${link.hasDropdown ? 'flex items-center gap-1' : ''}`}
+                                >
+                                    {link.label}
+                                    {link.hasDropdown && <ChevronDown className="w-4 h-4" />}
+                                </button>
+                            </NavLink>
                         ))}
+
                     </div>
 
                     {/* Right Side Icons */}

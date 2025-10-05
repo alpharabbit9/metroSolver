@@ -11,7 +11,7 @@ const MetroSolverSection = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-[#1a0b2e] via-[#2d1b4e] to-[#1a0b2e] flex items-center justify-center p-4 md:p-8 lg:p-12">
+    <div className="min-h-screen  flex items-center justify-center p-4 md:p-8 lg:p-12">
       <div className="max-w-7xl w-full grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
         
         {/* Left Section - Content */}
@@ -45,7 +45,7 @@ const MetroSolverSection = () => {
             transition={{ duration: 0.5, delay: 0.4 }}
             whileHover={{ scale: 1.05, boxShadow: '0 0 30px rgba(139, 92, 246, 0.5)' }}
             whileTap={{ scale: 0.95 }}
-            className="btn bg-gradient-to-r from-purple-600 to-violet-600 hover:from-purple-700 hover:to-violet-700 border-none text-white px-8 py-3 rounded-full text-sm md:text-base shadow-lg shadow-purple-500/30"
+            className="btn bg-gradient-to-b from-[#6331F1] via-[#8B57F4] to-[#8C57F5] hover:from-purple-700 hover:to-violet-700 border-none text-white px-8 py-3 rounded-full text-sm md:text-base shadow-lg shadow-purple-500/30"
           >
             ⚡ Book Now
           </motion.button>

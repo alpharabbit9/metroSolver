@@ -166,7 +166,7 @@ const SuccessStoriesSection = () => {
           <motion.button
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.98 }}
-            className="px-8 sm:px-12 py-3 sm:py-4 bg-gradient-to-r from-purple-600 to-purple-700 text-white font-semibold rounded-full shadow-lg shadow-purple-500/30 hover:shadow-purple-500/50 transition-all duration-300 border border-purple-500/50"
+            className="px-8 sm:px-12 py-3 sm:py-4 bg-gradient-to-r from-[#2a1a3e]/60 to-[#1a0f2e]/80 text-white font-semibold rounded-full shadow-lg shadow-purple-500/30 hover:shadow-purple-500/50 transition-all duration-300 border border-purple-500/50"
           >
             View More
           </motion.button>

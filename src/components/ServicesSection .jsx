@@ -151,7 +151,7 @@ const ServicesSection = () => {
   };
 
   return (
-    <div className="min-h-screen  py-12 px-4 md:px-8 lg:px-12">
+    <div className="min-h-screen  py-12 px-4 md:px-8 lg:px-12 m-0 p-0">
       
       {/* Top Banner */}
       <motion.div

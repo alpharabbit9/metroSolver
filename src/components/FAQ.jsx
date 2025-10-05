@@ -55,7 +55,7 @@ const FAQ = () => {
   ];
 
   return (
-    <section className="relative bg-gradient-to-b from-[#0a0515] via-[#0f0820] to-[#1a0f2e] py-16 sm:py-20 lg:py-24 overflow-hidden">
+    <section className="relative py-16 sm:py-20 lg:py-24 overflow-hidden m-0 p-0">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* FAQ Section */}
         <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 mb-16 sm:mb-20 lg:mb-24">

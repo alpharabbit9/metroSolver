@@ -95,7 +95,7 @@ const Footer = () => {
                   onClick={handleSubscribe}
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
-                  className="bg-gradient-to-r from-purple-600 to-purple-700 text-white px-6 sm:px-8 py-3 sm:py-4 rounded-full font-semibold flex items-center gap-2 hover:shadow-lg hover:shadow-purple-500/30 transition-all"
+                  className="bg-gradient-to-b from-[#6331F1] via-[#8B57F4] to-[#8C57F5] text-white px-6 sm:px-8 py-3 sm:py-4 rounded-full font-semibold flex items-center gap-2 hover:shadow-lg hover:shadow-purple-500/30 transition-all"
                 >
                   <Sparkles className="w-4 h-4" />
                   <span className="text-sm sm:text-base">Subscribe</span>

@@ -7,6 +7,9 @@ import MetroSolverSection from '../components/MetroSolverSection '
 import ServicesSection from '../components/ServicesSection '
 import SponsorMarquee from '../components/SponsorMarquee '
 import LatestWorksSection from '../components/LatestWorksSection '
+import HowItWorksSection from '../components/HowItWorksSection '
+import PodcastSection from '../components/PodcastSection'
+import ContactFormSection from '../components/ContactFormSection '
 
 const Home = () => {
   return (
@@ -18,6 +21,8 @@ const Home = () => {
       <TestimonialsSection/>
       <MetroSolverSection/>
       <SuccessStoriesSection/>
+      <PodcastSection/>
+      <ContactFormSection/>
       <FAQ/>
     </div>
   )

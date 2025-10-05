@@ -1,13 +1,15 @@
 import { motion } from 'framer-motion';
 import { Sparkles } from 'lucide-react';
 import chatBot from '../assets/Frame 3.gif'
+import growth from '../assets/Frame 1229.gif'
+import animationData from '../assets/Frame_1.gif'
 
 const Banner = () => {
   return (
     <section className="relative min-h-screen bg-gradient-to-br from-[#0a0515] via-[#130a24] to-[#1a0f2e] overflow-hidden flex items-center">
       {/* Background gradient overlay */}
       <div className="absolute inset-0 bg-gradient-to-r from-[#0a0515]/80 via-transparent to-transparent" />
-      
+
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 lg:py-0">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
           {/* Left Content */}
@@ -19,7 +21,7 @@ const Banner = () => {
           >
             {/* Heading */}
             <div className="space-y-4">
-              <motion.h1 
+              <motion.h1
                 className="text-5xl sm:text-6xl lg:text-7xl font-bold leading-tight"
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -29,18 +31,18 @@ const Banner = () => {
                 <br />
                 <span className="text-white">Digitalise Your</span>
                 <br />
-                <motion.span 
-                  className="bg-gradient-to-r from-purple-400 via-purple-500 to-purple-600 bg-clip-text text-transparent"
+                <motion.span
+                  className="bg-gradient-to-r from-purple-400 via-purple-500 to-purple-600 bg-clip-text mt-2 text-transparent"
                   initial={{ opacity: 0, scale: 0.9 }}
                   animate={{ opacity: 1, scale: 1 }}
                   transition={{ duration: 0.6, delay: 0.4 }}
                 >
-                  Growth
+                  <img src={growth} alt="" />
                 </motion.span>
               </motion.h1>
-              
+
               {/* Description */}
-              <motion.p 
+              <motion.p
                 className="text-gray-400 text-base sm:text-lg max-w-xl leading-relaxed"
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
@@ -67,7 +69,7 @@ const Banner = () => {
               </motion.div>
               <span>Explore Now</span>
               <motion.div
-                className="absolute inset-0 rounded-full bg-gradient-to-r from-purple-400 to-purple-600 opacity-0 group-hover:opacity-20 transition-opacity duration-300"
+                className="absolute inset-0 rounded-full bg-gradient-to-b from-[#6331F1] via-[#8B57F4] to-[#8C57F5] opacity-0 group-hover:opacity-20 transition-opacity duration-300"
               />
             </motion.button>
           </motion.div>
@@ -81,11 +83,17 @@ const Banner = () => {
           >
             {/* Animated Video */}
             <div className="relative w-full h-full flex items-center justify-center">
+
+              <img
+                className="w-96 hidden md:block object-cover"
+                src={animationData}
+                alt=""
+              />
               {/* Glow effect behind video */}
-              <div className="absolute inset-0 bg-purple-600/20 blur-3xl rounded-full scale-75" />
-              
+              {/* <div className="absolute inset-0 bg-purple-600/20 blur-3xl rounded-full scale-75" />
+               */}
               {/* Video container */}
-              <motion.div
+              {/* <motion.div
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ duration: 1, delay: 0.5 }}
@@ -102,7 +110,7 @@ const Banner = () => {
                   <source src="/src/assets/v.mp4" type="video/mp4" />
                   Your browser does not support the video tag.
                 </video>
-              </motion.div>
+              </motion.div> */}
             </div>
 
             {/* Floating Chat Bot Icon */}
@@ -119,12 +127,12 @@ const Banner = () => {
               >
                 {/* Glow effect behind icon */}
                 <div className="absolute inset-0 bg-purple-500 rounded-full blur-xl opacity-50" />
-                
+
                 {/* Icon container */}
                 <div className="relative w-16 h-16 sm:w-20 sm:h-20  rounded-full flex items-center justify-center shadow-2xl ">
                   {/* Discord-style bot icon */}
-                 <img src={chatBot} alt="" />
-                  
+                  <img src={chatBot} alt="" />
+
                   {/* Notification dot */}
                   <motion.div
                     className="absolute -top-1 -right-1 w-4 h-4 bg-green-400 rounded-full border-2 border-[#0a0515]"

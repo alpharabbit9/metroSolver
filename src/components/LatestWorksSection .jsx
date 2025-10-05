@@ -284,7 +284,7 @@ const LatestWorksSection = () => {
           <motion.button
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
-            className="px-8 py-4 bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white font-semibold rounded-full shadow-lg shadow-purple-500/30 transition-all duration-300"
+            className="px-8 py-4 bg-gradient-to-r from-[#2a1a3e]/60 to-[#1a0f2e]/80 hover:from-purple-700 hover:to-pink-700 text-white font-semibold rounded-full shadow-lg shadow-purple-500/30 transition-all duration-300"
           >
             View All Projects
           </motion.button>
