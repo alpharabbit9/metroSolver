@@ -5,6 +5,7 @@ import FeaturesBar from './components/FeatureBar'
 import Footer from './components/Footer'
 import Lenis from 'lenis'
 import ContactFormSection from './components/ContactFormSection '
+import ChatbotWidget from './components/ChatbotWidget'
 
 const App = () => {
 
@@ -23,6 +24,7 @@ const App = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-[#0a0515] via-[#130a24] to-[#1a0f2e]">
       <div className="min-h-screen bg-gradient-to-r from-[#0a0515]/80 via-transparent to-transparent">
+      <ChatbotWidget/>
         <header>
           <FeaturesBar />
           <Navbar />

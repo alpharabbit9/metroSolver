@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { ShoppingCart, Menu, X, ChevronDown, User, Settings, LogOut } from 'lucide-react';
+import { ShoppingCart, Menu, X, ChevronDown, User, Settings, LogOut, Sparkles } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 import Lottie from 'lottie-react';
 import logo from '../../public/Lottie Files/Logo.json'
@@ -58,7 +58,7 @@ const Navbar = () => {
                     {/* Right Side Icons */}
                     <div className="flex items-center space-x-4">
                         {/* Shopping Cart */}
-                        <div className="relative">
+                        <div className="relative hidden md:block object-cover">
                             <button
                                 onClick={() => setIsCartOpen(!isCartOpen)}
                                 className="relative p-3 rounded-full bg-purple-900/30 text-white hover:bg-purple-900/50 transition-colors"
@@ -79,42 +79,33 @@ const Navbar = () => {
                                             className="fixed inset-0 z-40"
                                             onClick={() => setIsCartOpen(false)}
                                         />
-                                        <motion.div
-                                            initial={{ opacity: 0, y: -10 }}
-                                            animate={{ opacity: 1, y: 0 }}
-                                            exit={{ opacity: 0, y: -10 }}
-                                            className="absolute right-0 mt-3 w-72 bg-[#1a0f2e] border border-purple-900/30 rounded-2xl shadow-2xl z-50"
-                                        >
-                                            <div className="p-5">
-                                                <div className="flex items-center justify-between mb-4">
-                                                    <h3 className="text-lg font-bold text-white">{cartItemCount} Items</h3>
-                                                    <button onClick={() => setIsCartOpen(false)} className="text-gray-400 hover:text-white">
-                                                        <X className="w-5 h-5" />
-                                                    </button>
-                                                </div>
-                                                <p className="text-purple-400 mb-4">Subtotal: ${cartTotal}</p>
-                                                <button className="w-full bg-purple-600 hover:bg-purple-700 text-white font-semibold py-2.5 rounded-full transition-colors">
-                                                    View cart
-                                                </button>
-                                            </div>
-                                        </motion.div>
+
                                     </>
                                 )}
                             </AnimatePresence>
                         </div>
 
-                        {/* User Profile */}
-                        <div className="relative">
-                            <button
-                                onClick={() => setIsProfileOpen(!isProfileOpen)}
-                                className="w-11 h-11 rounded-full border-2 border-purple-600 overflow-hidden hover:border-purple-500 transition-colors"
+                        {/* signin */}
+                        <div className="relative hidden md:block object-cover">
+                            <motion.button
+                                initial={{ opacity: 0, y: 20 }}
+                                animate={{ opacity: 1, y: 0 }}
+                                transition={{ duration: 0.6, delay: 0.8 }}
+                                whileHover={{ scale: 1.05, boxShadow: "0 0 30px rgba(168, 85, 247, 0.4)" }}
+                                whileTap={{ scale: 0.98 }}
+                                className="group relative px-8 py-4 bg-gradient-to-b from-[#6331F1] via-[#8B57F4] to-[#8C57F5] rounded-full text-white font-semibold text-lg shadow-lg shadow-purple-500/30 hover:shadow-purple-500/50 transition-all duration-300 flex items-center gap-3"
                             >
-                                <img
-                                    src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp"
-                                    alt="Profile"
-                                    className="w-full h-full object-cover"
+                                <motion.div
+                                    animate={{ rotate: [0, 15, -15, 0] }}
+                                    transition={{ duration: 2, repeat: Infinity, repeatDelay: 3 }}
+                                >
+                                    <Sparkles className="w-5 h-5" />
+                                </motion.div>
+                                <span>Sign in</span>
+                                <motion.div
+                                    className="absolute inset-0 rounded-full bg-gradient-to-r from-[#2a1a3e]/60 to-[#1a0f2e]/80 opacity-0 group-hover:opacity-20 transition-opacity duration-300"
                                 />
-                            </button>
+                            </motion.button>
 
                             {/* Profile Dropdown */}
                             <AnimatePresence>
@@ -175,22 +166,18 @@ const Navbar = () => {
                     >
                         <div className="px-4 py-6 space-y-2">
                             {navLinks.map((link) => (
-                                <button
-                                    key={link.id}
-                                    onClick={() => {
-                                        setActiveLink(link.label);
-                                        setIsMobileMenuOpen(false);
-                                    }}
-                                    className={`w-full text-left px-6 py-3 rounded-full text-sm font-medium transition-all ${activeLink === link.label
-                                        ? 'bg-white/10 text-white border border-white/20'
-                                        : 'text-gray-300 hover:bg-white/5'
-                                        }`}
-                                >
-                                    {link.label}
-                                    {link.hasDropdown && (
-                                        <ChevronDown className="inline-block w-4 h-4 ml-1" />
-                                    )}
-                                </button>
+                                <NavLink key={link.id} to={link.id}>
+                                    <button
+                                        onClick={() => setActiveLink(link.label)}
+                                        className={`px-6 py-2.5 rounded-full text-sm font-medium transition-all duration-300 ${activeLink === link.label
+                                            ? 'bg-white/10 text-white border border-white/20'
+                                            : 'text-gray-300 hover:text-white hover:bg-white/5'
+                                            } ${link.hasDropdown ? 'flex items-center gap-1' : ''}`}
+                                    >
+                                        {link.label}
+                                        {link.hasDropdown && <ChevronDown className="w-4 h-4" />}
+                                    </button>
+                                </NavLink>
                             ))}
                         </div>
                     </motion.div>

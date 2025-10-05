@@ -168,7 +168,7 @@ const Footer = () => {
           </div>
 
           {/* Links */}
-          <div>
+          <div className='hidden md:block object-cover'>
             <h4 className="text-lg font-bold mb-6">Company</h4>
             <ul className="space-y-3">
               {companyLinks.map((link, i) => (
@@ -181,7 +181,7 @@ const Footer = () => {
             </ul>
           </div>
 
-          <div>
+          <div className='hidden md:block object-cover'>
             <h4 className="text-lg font-bold mb-6">About Us</h4>
             <ul className="space-y-3">
               {aboutLinks.map((link, i) => (
@@ -194,7 +194,7 @@ const Footer = () => {
             </ul>
           </div>
 
-          <div>
+          <div className='hidden md:block object-cover'>
             <h4 className="text-lg font-bold mb-6">Support</h4>
             <ul className="space-y-3">
               {supportLinks.map((link, i) => (
@@ -207,7 +207,7 @@ const Footer = () => {
             </ul>
           </div>
 
-          <div>
+          <div className='hidden md:block object-cover'>
             <h4 className="text-lg font-bold mb-6">Services</h4>
             <ul className="space-y-3">
               {servicesLinks.map((link, i) => (

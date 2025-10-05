@@ -59,7 +59,7 @@ const Banner = () => {
               transition={{ duration: 0.6, delay: 0.8 }}
               whileHover={{ scale: 1.05, boxShadow: "0 0 30px rgba(168, 85, 247, 0.4)" }}
               whileTap={{ scale: 0.98 }}
-              className="group relative px-8 py-4 bg-gradient-to-r from-purple-600 to-purple-700 rounded-full text-white font-semibold text-lg shadow-lg shadow-purple-500/30 hover:shadow-purple-500/50 transition-all duration-300 flex items-center gap-3"
+              className="group relative px-8 py-4 bg-gradient-to-b from-[#6331F1] via-[#8B57F4] to-[#8C57F5] rounded-full text-white font-semibold text-lg shadow-lg shadow-purple-500/30 hover:shadow-purple-500/50 transition-all duration-300 flex items-center gap-3"
             >
               <motion.div
                 animate={{ rotate: [0, 15, -15, 0] }}
@@ -69,7 +69,7 @@ const Banner = () => {
               </motion.div>
               <span>Explore Now</span>
               <motion.div
-                className="absolute inset-0 rounded-full bg-gradient-to-b from-[#6331F1] via-[#8B57F4] to-[#8C57F5] opacity-0 group-hover:opacity-20 transition-opacity duration-300"
+                className="absolute inset-0 rounded-full bg-gradient-to-r from-[#2a1a3e]/60 to-[#1a0f2e]/80 opacity-0 group-hover:opacity-20 transition-opacity duration-300"
               />
             </motion.button>
           </motion.div>
@@ -79,7 +79,7 @@ const Banner = () => {
             initial={{ opacity: 0, scale: 0.8 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 1, delay: 0.3 }}
-            className="relative h-[400px] sm:h-[500px] lg:h-[600px] flex items-center justify-center"
+            className="relative h-[400px] sm:h-[500px] lg:h-[600px] flex items-center justify-center hidden md:block object-cover"
           >
             {/* Animated Video */}
             <div className="relative w-full h-full flex items-center justify-center">
@@ -113,35 +113,7 @@ const Banner = () => {
               </motion.div> */}
             </div>
 
-            {/* Floating Chat Bot Icon */}
-            <motion.div
-              className="absolute bottom-8 right-8 sm:bottom-12 sm:right-12 lg:bottom-16 lg:right-16"
-              initial={{ opacity: 0, scale: 0 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 0.6, delay: 1.2, type: "spring" }}
-            >
-              <motion.div
-                animate={{ y: [0, -10, 0] }}
-                transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
-                className="relative"
-              >
-                {/* Glow effect behind icon */}
-                <div className="absolute inset-0 bg-purple-500 rounded-full blur-xl opacity-50" />
-
-                {/* Icon container */}
-                <div className="relative w-16 h-16 sm:w-20 sm:h-20  rounded-full flex items-center justify-center shadow-2xl ">
-                  {/* Discord-style bot icon */}
-                  <img src={chatBot} alt="" />
-
-                  {/* Notification dot */}
-                  <motion.div
-                    className="absolute -top-1 -right-1 w-4 h-4 bg-green-400 rounded-full border-2 border-[#0a0515]"
-                    animate={{ scale: [1, 1.2, 1] }}
-                    transition={{ duration: 2, repeat: Infinity }}
-                  />
-                </div>
-              </motion.div>
-            </motion.div>
+            
           </motion.div>
         </div>
       </div>

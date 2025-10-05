@@ -3,11 +3,9 @@ import { motion } from "framer-motion";
 
 const FeaturesBar = () => {
   const features = [
-    "Budget friendly",
-    "No. 1 in Europe",
+    
     "On your first order",
     "For all products buy now get the offer",
-    "User Friendly",
     "24/7 Service",
   ];
 
