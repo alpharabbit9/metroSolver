@@ -6,20 +6,21 @@ import Footer from './components/Footer'
 
 const App = () => {
   return (
-    <div>
-     
-     <header>
-      <FeaturesBar/>
-      <Navbar/>
-     </header>
+    <div className="min-h-screen bg-gradient-to-br from-[#0a0515] via-[#130a24] to-[#1a0f2e]">
+      <div className="min-h-screen bg-gradient-to-r from-[#0a0515]/80 via-transparent to-transparent">
+        <header>  
+        <FeaturesBar />
+          <Navbar />
+        </header>
 
-     <main>
-      <Outlet/>
-     </main>
+        <main>
+          <Outlet />
+        </main>
 
-     <footer>
-      <Footer/>
-     </footer>
+        <footer>
+          <Footer />
+        </footer>
+      </div>
     </div>
   )
 }

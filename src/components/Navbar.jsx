@@ -26,48 +26,14 @@ const Navbar = () => {
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8  inset-0 bg-gradient-to-r from-[#0a0515]/80 via-transparent to-transparent ">
                 <div className="flex items-center justify-between h-20">
                     {/* Logo */}
-                    {/* <div className="flex-shrink-0">
-            <a href="/" className="flex items-center">
-              <div className="w-32 h-12">
-                <svg viewBox="0 0 200 100" className="w-full h-full">
-                  <motion.path
-                    d="M 20 80 L 60 20 L 80 50 L 60 80 Z"
-                    fill="none"
-                    stroke="#4F46E5"
-                    strokeWidth="6"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    initial={{ pathLength: 0 }}
-                    animate={{ pathLength: 1 }}
-                    transition={{ duration: 1.5, repeat: Infinity, repeatDelay: 1 }}
-                  />
-                  <motion.path
-                    d="M 70 20 L 110 80 L 90 50 L 110 20 Z"
-                    fill="none"
-                    stroke="#7C3AED"
-                    strokeWidth="6"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    initial={{ pathLength: 0 }}
-                    animate={{ pathLength: 1 }}
-                    transition={{ duration: 1.5, delay: 0.2, repeat: Infinity, repeatDelay: 1 }}
-                  />
-                  <motion.path
-                    d="M 120 80 L 160 20 L 180 50 L 160 80 Z"
-                    fill="none"
-                    stroke="#4F46E5"
-                    strokeWidth="6"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    initial={{ pathLength: 0 }}
-                    animate={{ pathLength: 1 }}
-                    transition={{ duration: 1.5, delay: 0.4, repeat: Infinity, repeatDelay: 1 }}
-                  />
-                </svg>
-              </div>
-            </a>
-          </div> */}
-                    <Lottie  animationData={logo} />
+                    <div className="flex-shrink-0">
+                        <a href="/" className="flex items-center">
+                            <div className="w-20 h-9">
+                                <Lottie animationData={logo} />
+                            </div>
+                        </a>
+                    </div>
+
                     {/* Desktop Navigation */}
                     <div className="hidden lg:flex items-center space-x-2  px-4 py-1 rounded-3xl bg-[#150D1C]">
                         {navLinks.map((link) => (
@@ -75,8 +41,8 @@ const Navbar = () => {
                                 key={link.id}
                                 onClick={() => setActiveLink(link.label)}
                                 className={`px-6 py-2.5 rounded-full text-sm font-medium transition-all duration-300 ${activeLink === link.label
-                                        ? 'bg-white/10 text-white border border-white/20'
-                                        : 'text-gray-300 hover:text-white hover:bg-white/5'
+                                    ? 'bg-white/10 text-white border border-white/20'
+                                    : 'text-gray-300 hover:text-white hover:bg-white/5'
                                     } ${link.hasDropdown ? 'flex items-center gap-1' : ''}`}
                             >
                                 {link.label}
@@ -214,8 +180,8 @@ const Navbar = () => {
                                         setIsMobileMenuOpen(false);
                                     }}
                                     className={`w-full text-left px-6 py-3 rounded-full text-sm font-medium transition-all ${activeLink === link.label
-                                            ? 'bg-white/10 text-white border border-white/20'
-                                            : 'text-gray-300 hover:bg-white/5'
+                                        ? 'bg-white/10 text-white border border-white/20'
+                                        : 'text-gray-300 hover:bg-white/5'
                                         }`}
                                 >
                                     {link.label}
