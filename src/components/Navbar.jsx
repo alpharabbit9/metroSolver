@@ -16,7 +16,7 @@ const Navbar = () => {
         { id: '/', label: 'Home' },
         { id: '/about', label: 'About us' },
         { id: '/services', label: 'Services', hasDropdown: true },
-        { id: '/white-label', label: 'White label' },
+        { id: '/whiteLabel', label: 'White label' },
         { id: '/contact', label: 'Contact us' },
     ];
 

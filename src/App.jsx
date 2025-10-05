@@ -4,6 +4,7 @@ import Navbar from './components/Navbar'
 import FeaturesBar from './components/FeatureBar'
 import Footer from './components/Footer'
 import Lenis from 'lenis'
+import ContactFormSection from './components/ContactFormSection '
 
 const App = () => {
 
@@ -32,6 +33,7 @@ const App = () => {
         </main>
 
         <footer>
+          <ContactFormSection/>
           <Footer />
         </footer>
       </div>

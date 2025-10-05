@@ -22,7 +22,6 @@ const Home = () => {
       <MetroSolverSection/>
       <SuccessStoriesSection/>
       <PodcastSection/>
-      <ContactFormSection/>
       <FAQ/>
     </div>
   )
